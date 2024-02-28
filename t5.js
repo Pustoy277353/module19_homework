@@ -1,8 +1,5 @@
-//5
-
 console.log("Задание 5");
 
-// Родительский класс для электроприборов
 class ElectricalAppliance {
     constructor(name, power) {
         this.name = name;
@@ -21,7 +18,6 @@ class ElectricalAppliance {
     }
 }
 
-// Класс для настольной лампы
 class Lamp extends ElectricalAppliance {
     constructor(name, power, brightness) {
         super(name, power);
@@ -33,7 +29,6 @@ class Lamp extends ElectricalAppliance {
     }
 }
 
-// Класс для компьютера
 class Computer extends ElectricalAppliance {
     constructor(name, power, operatingSystem) {
         super(name, power);
@@ -45,17 +40,14 @@ class Computer extends ElectricalAppliance {
     }
 }
 
-// Создание экземпляров классов
 const deskLamp = new Lamp('Настольная лампа', 25, 'Высокая');
 const desktopComputer = new Computer('Компьютер', 500, 'Windows');
 
-// Включение приборов
 deskLamp.turnOn();
 deskLamp.adjustBrightness();
 
 desktopComputer.turnOn();
 desktopComputer.runOperatingSystem();
 
-// Выключение приборов
 deskLamp.turnOff();
 desktopComputer.turnOff();
